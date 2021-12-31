@@ -1,10 +1,13 @@
 :root{
-    --cor1: #00FF00; 
-    --cor2: #7B68EE;
-    --cor3: ;
+    --cor1: #282C34; 
+    --cor2: #61DAFB;
+    --cor3: #12141a;
 }
+
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--cor2);
+    background-color: var(--cor1)
 }
 body, html{
     padding: 0;
@@ -63,8 +66,8 @@ button{
 #play{
     display: flex;
     border: none;
-    width: 60px;
-    height: 60px;
+    width: 64px;
+    height: 64px;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -83,15 +86,27 @@ button{
     border-radius: 15px;
     overflow: hidden;
     -webkit-appearance: none;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+    box-shadow: inset 0 0 5px var(--cor3);
 }
 .range::-webkit-slider-thumb{
     -webkit-appearance: none;
     width : 15px;
     height : 15px;
     border-radius: 50%;
-    background-color: #000;
+    background-color: var(--cor3);
     cursor: pointer;
     border: 4px solid transparent;
-    box-shadow: -407px 0 0 400px #000;
+    box-shadow: -407px 0 0 400px var(--cor3);
+}
+.img-btn{
+    width: 40px;
+    height: 40px;
+}
+.play{
+    display: flex;
+    border: none;
+    width: 64px;
+    height: 64px;
+    margin-left: 20px;
+    margin-right: 20px;
 }

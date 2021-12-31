@@ -2,7 +2,7 @@ var musica = document.querySelector('audio')
 var bntPlay = document.querySelector('btn-play')
 var play = document.querySelector('#play')
 var tocando = false
-var nMusica = -1
+var nMusica = Math.floor(Math.random() * 10)
 let imagem = document.getElementById('img')
 let nome = document.getElementById('nomeMusica')
 let artista = document.getElementById('artista')
@@ -12,11 +12,11 @@ function tocarMusica(){
     if(tocando == false){
         tocando = true
         musica.play()
-        play.src = 'https://img.icons8.com/material-outlined/24/000000/pause.png'
+        play.src = 'Img/657901_controls_ios_media player_pause_paused_icon (1).png'
     }else if(tocando == true){
         tocando = false
         musica.pause()
-        play.src = 'https://img.icons8.com/material-outlined/50/000000/circled-play.png'
+        play.src = 'Img/1894657_play_controller_preview_start_icon.png'
     }
 }
 function proxima(){
@@ -39,6 +39,7 @@ function voltar(){
 musica.addEventListener('timeupdate',()=>{
     Vinput.max = musica.duration
     Vinput.value = musica.currentTime
+    updTempo()
 })
 musica.addEventListener('ended',()=>{
     proxima()
@@ -70,10 +71,10 @@ function tempo(segundos){
 }
 function updTempo(){
     document.getElementById('inicio').textContent = tempo(Math.floor(musica.currentTime))
-    
-    tempoAtualMusica.textContent = converterTempo(Math.floor(musica.currentTime))
+    let tempoAtualMusica = document.getElementById('inicio')
+    tempoAtualMusica.textContent = tempo(Math.floor(musica.currentTime))
     let tempoMusica = document.getElementById('fim')
-    tempoMusica.textContent = converterTempo(Math.floor(musica.duration))
+    tempoMusica.textContent = tempo(Math.floor(musica.duration))
 }
 
 
