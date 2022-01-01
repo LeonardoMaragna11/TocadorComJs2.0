@@ -17,44 +17,43 @@
 </head>
 
 <body id="root">
-    <h2>L11's</h2>
-        <div class="img">
-            <img id="img" src="https://via.placeholder.com/300x300">
+    <div class="tela">
+        
+        <h2>L11's</h2>
+            <div class="img">
+                <img id="img" src="https://via.placeholder.com/300x300">
+            </div>
+        <div class="descricao">
+            <h2 class="Nome_musica" id="nomeMusica">Bem vindo</h2>
+            <i class="nome do artista" id="artista">Aperte o Play para começar</i>
         </div>
-    <div class="descricao">
-        <h2 class="Nome_musica" id="nomeMusica">Bem vindo</h2>
-        <i class="nome do artista" id="artista">Aperte o Play para começar</i>
-    </div>
-    <div class="duracao">
-        <div class="barra">
-            <input type="range" max='100' min='0' value='0' class="range" name="progresso" onclick='range()' onchange="range()" id="progresso">
+        <div class="duracao">
+            <div class="barra">
+                <input type="range" max='100' min='0' value='0' class="range" name="progresso" onclick='range()' onchange="range()" id="progresso">
+            </div>
+            <div class="tempo">
+                <p id="inicio">00:00</p>
+                <p id="fim">00:00</p>
+            </div>
         </div>
-        <div class="tempo">
-            <p id="inicio">00:00</p>
-            <p id="fim">00:00</p>
+        <div class="player">
+            <!-- Icones -->
+                <button id="btn-esquerdo" onclick="voltar()">
+                    <img class="img-btn" src="Img/2931162_arrow_back_left_direction_move_icon.png" />
+                </button>
+                <button id="btn-play" onclick="tocarMusica()">
+                    <img
+                        style="width: 64px"
+                        id="play" class="play"
+                        src="Img/1894657_play_controller_preview_start_icon.png"
+                    />
+                </button>
+                <button id="btn-direito" onclick="proxima()">
+                    <img class="img-btn" src="Img/2931159_arrow_forward_right_move_navigation_icon.png"/>
+                </button>
         </div>
+        <audio src="Musics/audio0.ogg"></audio>
     </div>
-    <div class="player">
-        <!-- Icones -->
-            <button id="btn-esquerdo" onclick="voltar()">
-                <img class="img-btn" src="Img/2931162_arrow_back_left_direction_move_icon.png" />
-            </button>
-
-
-            <button id="btn-play" onclick="tocarMusica()">
-                <img 
-                    style="width: 64px"
-                    id="play" class="play" 
-                    src="Img/1894657_play_controller_preview_start_icon.png"
-                />    
-            </button>
-
-
-            <button id="btn-direito" onclick="proxima()">
-                <img class="img-btn" src="Img/2931159_arrow_forward_right_move_navigation_icon.png"/>
-            </button>
-    </div>
-    <audio src="Musics/audio0.ogg"></audio>
     <script src="Tocador.js"></script>
 </body>
 
