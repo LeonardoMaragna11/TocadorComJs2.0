@@ -1,6 +1,7 @@
 var musica = document.querySelector('audio')
 var bntPlay = document.querySelector('btn-play')
 var play = document.querySelector('#play')
+var pause = document.querySelector('#pause')
 var tocando = false
 var nMusica = Math.floor(Math.random() * 10)
 let imagem = document.getElementById('img')
@@ -12,11 +13,13 @@ function tocarMusica(){
     if(tocando == false){
         tocando = true
         musica.play()
-        play.src = 'Img/Untitled (4).png'
+        pause.style.display = 'flex'
+        play.style.display = 'none'
     }else if(tocando == true){
         tocando = false
         musica.pause()
-        play.src = 'Img/Untitled (3).png'
+        play.style.display = 'flex'
+        pause.style.display = 'none'
     }
 }
 function proxima(){
