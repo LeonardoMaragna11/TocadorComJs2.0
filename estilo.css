@@ -114,3 +114,20 @@ button{
 #pause{
     display: none;
 }
+#letra{
+    min-height: 500px;
+    width: 300px;
+    border: none;
+    font-size: 21px;
+    background-color: var(--cor3);
+    text-align: left;
+    border-radius: 10px;
+    padding: 10px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+.letraMusica{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
