@@ -12,11 +12,11 @@ function tocarMusica(){
     if(tocando == false){
         tocando = true
         musica.play()
-        play.src = 'Img/657901_controls_ios_media player_pause_paused_icon (1).png'
+        play.src = 'Img/Untitled (4).png'
     }else if(tocando == true){
         tocando = false
         musica.pause()
-        play.src = 'Img/1894657_play_controller_preview_start_icon.png'
+        play.src = 'Img/Untitled (3).png'
     }
 }
 function proxima(){
